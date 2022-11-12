@@ -1,0 +1,71 @@
+extras
+
+.left {
+    background-color: blue;
+    margin-top: 30px;
+    text-align:left;
+    display: inline;
+    width: 80px;
+    height: 80px;
+    max-width: 20px;
+    max-height: 20px;
+}
+.center {
+    margin-top: 30px;
+    text-align: center;
+    display: inline;
+    max-width: 20px;
+    max-height: 20px;
+}
+.right {
+    margin-top: 30px;
+    text-align: right;
+    display: inline;
+    max-width: 20px;
+    max-height: 20px;
+}
+
+
+
+
+
+
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    grid-template-rows: 100px 1fr 70px 100px 1fr 70px;
+    justify-items: center;
+    grid-template-areas: 
+                    "nav producto-destacado producto-destacado producto-destacado"
+                    "nav image1 image2 image3"
+                    "nav p1 p2 p3"
+                    "nav producto-promo producto-promo producto-promo"
+                    "nav promo1 promo2 promo3"
+                    "nav p4 p5 p6";
+}
+
+.nav {
+    grid-area: nav;
+}
+.producto-destacado {
+    grid-area: producto-destacado;
+}
+.image1 {
+    grid-area: image1;
+}
+.image2 {
+    grid-area: image2;
+}
+.image3 {
+    grid-area: image3;
+}
+.p1 {
+    grid-area: p1;
+}
+.p2 {
+    grid-area: p2;
+}
+.p3 {
+    grid-area: p3;
+}

@@ -1,0 +1,519 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto Slab', serif;
+}
+/*HEADER*/
+h1 {
+    font-family: 'Gideon Roman', cursive;
+    margin: 5px;
+    padding: 5px;
+}
+
+.header {
+    height: 200px;
+}
+
+.header__div {
+   height: 150px;
+}
+
+.header__div__section {
+   text-align: center;
+}
+
+.img {  
+    margin-top: 40px;
+    max-width: 300px;
+    max-height: 300px;
+}
+
+
+.header__h1 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 100;
+    font-size: 20px;
+}
+
+.div__nav{
+    height: 200px;
+}
+
+.div__nav__ul {
+    text-align: center;
+    margin-top: -40px; 
+}
+
+.enlaces {
+    padding: 20px;
+    margin-bottom: 20px;
+    margin-left:50px;
+    margin-top: 100px;
+    font-weight: bold;
+    font-size: 120%;
+    list-style: none;
+    text-align: center;
+    font-weight: bold;
+    display: inline-block; 
+    font-size: 120%;
+}
+/*HEADER*/
+
+
+
+/*MAIN*/
+.main__div {
+    margin-top: 100px;
+    display: block;
+    text-align: center;
+}
+.main_div_img {
+    display:block;
+    margin-top: 120px;
+    margin-bottom: 50px;
+    text-align: center;
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+
+.main_div_cajacandy {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+}
+.main_div_section_img_candy {
+    margin-top: 30px;
+    text-align: left;
+}
+.main_div_section_textocandy {
+    text-align: center;
+    float: left;
+    font-weight: bold;
+}
+
+
+
+.main_div_cajaglobos {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+}
+.main_div_section_img_globos {
+    margin-top: 60px;
+    text-align: right;
+}
+.main_div_section_textoglobos {
+    text-align: center;
+    float: right;
+    font-weight: bold;
+}
+.div_section_p_h4_candyglobo {
+    font-style: italic;
+    font-weight: bold;
+}
+.main_div_section_input {
+    text-align:center;
+    margin-top: 20px;
+}
+
+/*MAIN*/
+
+
+
+/*MAIN2*/
+.div__section__h1__servicios {
+    text-align: center;
+    margin-top: 50px;
+}
+ 
+.div_servicios {
+    display: inline-block;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 80px;
+}
+
+.cajaservicios {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+}
+
+.div_section_p {
+    font-weight: bold;
+}
+
+.div_section_image_left {
+    width: 400px;
+    height: 400px;  
+}
+
+.div_section_image_center {
+    width: 400px;
+    height: 400px;  
+}
+
+.div_section_image_right {
+    width: 400px;
+    height: 400px;  
+}
+
+.card{
+    transition:0.5s;
+    cursor:pointer;
+  }
+  .card-title{  
+    font-size:15px;
+    transition:1s;
+    cursor:pointer;
+  }
+  .card-title i{  
+    font-size:15px;
+    transition:1s;
+    cursor:pointer;
+    color:#ffa710
+  }
+  .card-title i:hover{
+    transform: scale(1.25) rotate(100deg); 
+    color:#18d4ca;
+    
+  }
+  .card:hover{
+    transform: scale(1.05);
+    box-shadow: 10px 10px 15px rgba(0,0,0,0.3);
+  }
+  .card-text{
+    height:80px;  
+  }
+  
+  .card::before, .card::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: scale3d(0, 0, 1);
+    transition: transform .3s ease-out 0s;
+    background: rgba(255, 255, 255, 0.1);
+    content: '';
+    pointer-events: none;
+  }
+  .card::before {
+    transform-origin: left top;
+  }
+  .card::after {
+    transform-origin: right bottom;
+  }
+  .card:hover::before, .card:hover::after, .card:focus::before, .card:focus::after {
+    transform: scale3d(1, 1, 1);
+  }
+
+/*MAIN2*/
+
+
+
+/*FOOTER*/
+
+.cajafooter {
+    background-color: #f86c01e7;
+    padding: 60px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.footer-ush {
+    text-align: center;
+    font-weight: bold;
+}
+
+.suscribite {
+    text-align: center;
+    font-weight: bold;
+}
+
+.footer-redes {
+    text-align: center;
+    font-weight: bold;
+}
+
+.footer_div_h4 {
+    margin-bottom: 10px;
+}
+
+
+/*FOOTER*/
+
+
+
+/*PAGE ARMA TU FIESTA*/
+
+
+.main_div_fiestaparatodos {
+    text-align: center;
+    margin-top: 150px;
+    margin-bottom: 5px;
+}
+.main_div_fiestaparatodos1 {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+ 
+.div_fiesta {
+    display: inline-block;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 80px;
+}
+
+.cajafiesta {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+}
+
+.div_section_p {
+    font-weight: bold;
+}
+
+.div_section_image {
+    width: 300px;
+    height: 300px;  
+}
+
+.boton {
+    margin: 10px;
+    padding: 5px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto ;
+    grid-template-rows: 400px 400px;
+}
+
+
+
+
+
+
+
+
+
+/*PAGINA ARMA TU FIESTA*/
+
+
+
+/*PAGINA CONTACTO*/
+
+.main_div_h5_contacto {
+    background-color: rgb(255, 115, 0);
+    height: 150px;
+    text-align: center;
+    
+    font-size: 30px;
+    margin-top: 100px;
+    margin-bottom:30px;
+}
+
+.main_div_section_contacto {
+   
+    padding: 40px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.main_div_section_article_left {
+    text-align: center;
+    font-weight: bold;
+}
+
+.main_div_section_article_img1 {
+    width: 80px;
+    height: 80px;
+}
+
+.main_div_section_article_center {
+    text-align: center;
+    font-weight: bold;
+}
+
+.main_div_section_article_img2 {
+    width: 80px;
+    height: 80px;
+}
+
+.main_div_section_article_right {
+    text-align: center;
+    font-weight: bold;
+}
+
+.main_div_section_article_img3 {
+    width: 80px;
+    height: 80px;
+}
+
+.main_div_form {
+    text-align: left;
+    padding: 30px;
+    margin-left: 50px;
+    font-size: 30px;
+}
+
+.main_div_fecha {
+    font-size: 20px;
+}
+
+/*PAGINA CONTACTO*/
+
+
+
+.titulo {
+    text-align: center;
+}
+
+
+
+
+
+
+.fiestanenes {
+    margin-bottom: 60px;
+    margin-top: 60px;
+}
+
+.fiestanenas {
+    margin-bottom: 60px;
+    margin-top: 60px;
+}
+.nombre {
+    max-width: 150px;
+}
+.margenes {
+    margin-bottom: 100px;
+    margin-top: 100px;
+}
+
+.imagecarpas {
+    margin-top: 20px;
+    margin-left: 400px;
+    display:block;
+    margin-bottom: 20px;
+}
+
+/*MOBILE FIRST*/
+
+
+@media screen and (max-width: 600px) {
+    .header__div__section {
+        width:100%;
+        max-width:400px;
+    }
+
+    #body_grid{
+        width: 100%;
+    }
+    .main_div {
+        width: 100%;
+    }
+    .main_div_img {
+        width:100%;
+        max-width:400px;
+    }
+    
+    .main_div_cajacandy {
+        display: grid;
+        grid-template-columns: auto ;
+        grid-template-rows: 400px ;
+        align-self: center;
+        margin: 15%;
+        }
+    .main_div_section_img_candy {
+        margin-top: 250px;
+        margin-bottom: 300px;
+        
+    }
+    .main_div_section_textocandy {
+        margin-top: 50px;
+        align-self: center;
+    }
+
+    .main_div_cajaglobos {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 400px;
+        align-items: center;
+        margin: 15%;
+    }
+
+    .main_div_section_img_globos {
+        margin-top: 250px;
+        margin-bottom: 300px;
+     
+    }
+    .img {
+        width:100%;
+        max-width:400px;
+    }
+
+    .main_div_section_textoglobos {
+        margin-top: 50px;
+        align-self: center;
+        
+    }
+    .cajaservicios {
+        display: grid;
+        grid-template-columns: auto;
+      
+    }
+    .cajafooter {
+        display: grid;
+        grid-template-columns: auto;
+    }
+
+    
+    .cajafiesta {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 400px;
+        align-items: center;
+        margin: 15%;
+    }
+    .main_div_fiestaparatodos {
+        font-size: calc(1em + 1vw);
+    }
+
+    .div_container {
+        width: 100%;
+        text-align: center;
+    }
+
+}
+
+
+
+
