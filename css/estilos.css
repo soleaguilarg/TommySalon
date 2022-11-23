@@ -32,6 +32,19 @@ h1 {
     max-height: 300px;
 }
 
+.iconousuario {
+  color: #707070;
+  text-align: right;
+  position: relative;
+  bottom: 80px;
+}
+
+.iconosearch {
+  color: #707070;
+  text-align: left;
+  position: relative;
+  bottom: 100px;
+}
 
 .header__h1 {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -49,7 +62,7 @@ h1 {
 }
 
 .enlaces {
-    padding: 20px;
+    padding: 15px;
     margin-bottom: 20px;
     margin-left:50px;
     margin-top: 100px;
@@ -61,11 +74,111 @@ h1 {
     display: inline-block; 
     font-size: 120%;
 }
+
+/* Clearing floats */
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table;
+}
+
+.cf:after {
+  clear: both;
+}
+
+.cf {
+  *zoom: 1;
+}
+
+/* Mini reset, no margins, paddings or bullets */
+.menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Main level */
+.menu {			
+  margin: 10px auto;
+  margin-bottom: 10px;
+  width: 800px;
+  /* http://www.red-team-design.com/horizontal-centering-using-css-fit-content-value */
+  width: -moz-fit-content;
+  width: -webkit-fit-content;
+  width: fit-content;	
+}
+
+.menu > li {
+  background: #c2da0c;
+  float: left;
+  position: relative;
+  transform: skewX(25deg);
+}
+
+.menu a {
+  display: block;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: Arial, Helvetica;
+  font-size: 14px;
+}		
+
+.menu li:hover {
+  background: #e74c3c;
+}		
+
+.menu > li > a {
+  transform: skewX(-25deg);
+  padding: 1em 2em;
+}
+
 /*HEADER*/
 
 
 
 /*MAIN*/
+
+.container {
+    display: flex;
+    width: 100%;
+    padding: 4% 2%;
+    box-sizing: border-box;
+    height: 100vh;
+    margin-top: 120px;
+  }
+  
+  .box {
+    flex: 1;
+    overflow: hidden;
+    transition: .5s;
+    margin: 0 2%;
+    margin-top: 30px;
+    box-shadow: 0 20px 30px rgba(0,0,0,.1);
+    line-height: 0;
+  }
+  
+  .box > img {
+    width: 200%;
+    height: calc(100% - 10vh);
+    object-fit: cover; 
+    transition: .5s;
+  }
+  
+  .box > span {
+    font-size: 3.8vh;
+    display: block;
+    text-align: center;
+    height: 10vh;
+    line-height: 2.6;
+  }
+  
+  .box:hover { flex: 1 1 50%; }
+  .box:hover > img {
+    width: 100%;
+    height: 100%;
+  }
+   
 .main__div {
     margin-top: 100px;
     display: block;
@@ -79,7 +192,6 @@ h1 {
     margin-left: auto; 
     margin-right: auto;
 }
-
 
 .main_div_cajacandy {
     width: 100%;
@@ -101,8 +213,6 @@ h1 {
     float: left;
     font-weight: bold;
 }
-
-
 
 .main_div_cajaglobos {
     width: 100%;
@@ -127,7 +237,12 @@ h1 {
 }
 .main_div_section_input {
     text-align:center;
-    margin-top: 20px;
+    margin-top: 10px;
+
+}
+
+.main_div {
+    margin-top: 200px;
 }
 
 /*MAIN*/
@@ -158,6 +273,7 @@ h1 {
 
 .div_section_p {
     font-weight: bold;
+    margin-top: 30px;
 }
 
 .div_section_image_left {
@@ -225,6 +341,43 @@ h1 {
     transform: scale3d(1, 1, 1);
   }
 
+
+  
+button {
+    margin: 50px;
+    font-family: inherit;
+  }
+  
+  .fill {
+    font-size: 20px;
+    font-weight: 200;
+    letter-spacing: 1px;
+    padding: 13px 50px 13px;
+    outline: 0;
+    border: 1px solid black;
+    cursor: pointer;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0);
+  }
+  
+  .fill::after {
+    content: "";
+    background-color: #ffc64c;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    top: 7px;
+    left: 7px;
+    transition: 0.2s;
+  }
+  
+  .fill:hover::after {
+    top: 0px;
+    left: 0px;
+  }
+
+  
 /*MAIN2*/
 
 
@@ -232,8 +385,9 @@ h1 {
 /*FOOTER*/
 
 .cajafooter {
-    background-color: #f86c01e7;
+    background-color: #707070;
     padding: 60px;
+    margin-top: 60px;
     align-items: center;
     display: flex;
     justify-content: space-between;
@@ -259,8 +413,130 @@ h1 {
 
 .footer_div_h4 {
     margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: bold;
 }
 
+.imgRedonda {
+  width:45px;
+  height:45px;
+  border-radius:150px;
+}
+
+
+*:focus,
+*:active {
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  place-items: center;
+}
+
+.wrapper {
+  display: inline-flex;
+  list-style: none;
+}
+
+.wrapper .icon {
+  position: relative;
+  border-radius: 50%;
+  padding: 5px;
+  margin: 5px;
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background: #ffffff;
+  color: #ffffff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #ffffff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+  background: #1877F2;
+  color: #ffffff;
+}
+
+.wrapper .twitter:hover,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip::before {
+  background: #1DA1F2;
+  color: #ffffff;
+}
+
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+  background: #E4405F;
+  color: #ffffff;
+}
+
+.wrapper .pinterest:hover,
+.wrapper .pinterest:hover .tooltip,
+.wrapper .pinterest:hover .tooltip::before {
+  background: #ff0000;
+  color: #ffffff;
+}
+
+.wrapper .youtube:hover,
+.wrapper .youtube:hover .tooltip,
+.wrapper .youtube:hover .tooltip::before {
+  background: #CD201F;
+  color: #ffffff;
+}
+
+.form__input {
+  width: 380px;
+  height: 40px;
+}
 
 /*FOOTER*/
 
@@ -276,10 +552,38 @@ h1 {
 }
 .main_div_fiestaparatodos1 {
     text-align: center;
-    margin-top: 10px;
+    margin-top: 150px;
     margin-bottom: 5px;
 }
- 
+
+
+.imgs1 {
+    margin-top: 300px;
+    margin-bottom: 300px;
+}
+.imgs2 {
+    margin-top: 500px;
+    margin-bottom: 300px;
+}
+
+.imgs3 {
+    margin-top: 300px;
+    margin-bottom: 300px;
+}
+.imgs4 {
+    margin-top: 500px;
+    margin-bottom: 300px;
+}
+
+.imgs5 {
+    margin-top: 300px;
+    margin-bottom: 300px;
+}
+.imgs6 {
+    margin-top: 900px;
+    margin-bottom: 700px;
+}
+
 .div_fiesta {
     display: inline-block;
     text-align: center;
@@ -319,12 +623,165 @@ h1 {
 
 
 
-
-
-
-
-
 /*PAGINA ARMA TU FIESTA*/
+
+/*PAGE ALQUILER*/
+.main_div_section_textocandy_alquiler {
+  margin-left: 40px;
+  text-align: center;
+}
+
+.main_div_section_textoglobos_alquiler {
+  margin-left: 40px;
+  text-align: center;
+}
+
+.imgr {
+  float: left; 
+}
+
+
+/*PAGE ALQUILER*/
+
+/*PAGE FIESTAS A DOMICILIO*/
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+  display: flex;
+  margin-top: 100px;
+  align-items: center;
+}
+
+
+@import url("https://fonts.googleapis.com/css?family=Arimo|Oswald"); 
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arimo', sans-serif;
+}
+section:first-child{
+  position: relative;
+  height:100px;
+}
+section .title{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top:-35.5px;
+  margin-left: -91.4px;
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 10px;
+}
+.title h1,h2{
+  font-family:'Oswald', sans-serif; 
+  font-size:28px; 
+  font-weight:400; 
+  text-transform: uppercase;
+}
+.title h2{
+  font-size:20px;
+  font-weight:100;
+  letter-spacing: 5px;
+  margin-left: 13px;
+}
+.p-one{
+ background-image:  linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('https://www.decoora.com/wp-content/uploads/2013/12/tipis-para-ni%C3%B1os.jpg'); 
+}
+.p-two{
+ background-image:  linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('http://yourshot.nationalgeographic.com/u/fQYSUbVfts-T7odkrFJckdiFeHvab0GWOfzhj7tYdC0uglagsDUfLlPgrXBmpl47L_loRqvjQAF8rf0zUosTGvin-6e78q5sfCcVX3bmVTMIIXO6Tip6RwcEifpvaUYLqZqeb_QXL_hMs0S2-KyKQmlkXBgPl8cmV7EfviKXmGBHSzVSBO6vID7z-6vseqDbm-vjCRptb-cHr6DG_Fw5ZrX16ipWhA/'); 
+}
+.p-three{
+ background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('http://yourshot.nationalgeographic.com/u/fQYSUbVfts-T7odkrFJckdiFeHvab0GWOfzhj7tYdC0uglagsDYhq4Ex8s5iidtN2D-gsq8R6I9UvklI2CBfS-FrbCGDzSvH4NAUkD_8qN1OoS2Rbse4v-v8EG0PNP7o3MEKhYPjgh9ctRu0tobfXYMjJtRn13-BIYRDxf-GqgJyeRjwEOM-G5Z93u60vJ1-0Rgw1R1PtW2SmuoYi7z7Eg/'); 
+}
+.p-four{
+  background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('http://yourshot.nationalgeographic.com/u/fQYSUbVfts-T7odkrFJckdiFeHvab0GWOfzhj7tYdC0uglagsDcYmE3RitDZn-Yii57x4-5jsHdUxHDMvdLBnj3tfIm1zfzl-yw2G7ANtLSxm2lLwOXVxqJtvDa0ROT0ZaPWLVHzHRbs0cNFiz9YNSaJvYYdELBDYSF_b32fGuTBEu8iX4XGFR7_TBXQ_bSK1N-C5HLTv6gXe4Vp9CadyYOz88E/');
+}
+.parallax-inner{
+  position:relative;
+  min-height: 500px;
+  background-position: top center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.parallax-inner > h2{
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -20.5px;
+  width: 100%;
+  text-align: center;
+}
+.content-text p{
+  padding: 25px 50px 25px 50px;
+  font-weight: 400;
+  text-align: justify;
+  line-height: 24px;
+}
+.first-letter{
+  float: left;
+  font-weight: 400;
+  font-size: 84px;
+  line-height: 64px;
+  padding-top: 2px;
+  padding-right: 8px;
+  padding-left: 4px;
+}
+.line-break{
+  border-bottom: 1px solid #bf2d33;
+  width: 200px;
+  margin: 0 auto;
+}
+.red{
+  color: #5e5a58;
+}
+.darkgreen{
+  color:#0d2100;
+}
+.green{
+  color:#6b6837;
+}
+.skyblue{
+  color: #5c9cbf;
+}
+footer{
+  width: 100%;
+  padding: 0 1.5rem;
+}
+footer > p{
+  text-transform: capitalize;
+  width:460px;
+  margin:0 auto;
+  font-size: 27px;
+}
+
+/* media queries */
+@media screen and (max-width:500px){
+  .parallax-inner{
+    min-height: 350px;
+    background-size: cover;
+  }
+  footer{
+    padding: 10px;
+  }
+  footer > p{
+    width: 100%;
+    font-size: 24px;
+  }
+}
+/*PAGE FIESTAS A DOMICILIO*/
+
+
+
+
+
+
+
+
 
 
 
@@ -395,9 +852,6 @@ h1 {
 .titulo {
     text-align: center;
 }
-
-
-
 
 
 
